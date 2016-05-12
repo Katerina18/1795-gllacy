@@ -143,6 +143,7 @@ img {
 .main-navigation > li:hover .sub-menu {
   display: block;
 }
+
 .user-blok {
   float: right;
   margin: 24px 0 18px 0;
@@ -1224,9 +1225,6 @@ img {
   padding-top: 44px;
 }
 
-.modal-content {
-
-}
 
 .feedback {
   position: fixed;
