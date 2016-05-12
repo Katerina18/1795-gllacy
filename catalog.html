@@ -10,47 +10,51 @@
     <body class="inner-page">
         <header class="main-header">
             <div class="container clearfix header">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.svg" width="149" height="62" alt="Gllacy"></a>
+                <div class="page-header_upper clearfix">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.svg" width="149" height="62" alt="Gllacy"></a>
+                    </div>
+                    <nav class="main-navigation">
+                        <ul>
+                            <li class="active">
+                                <a>Каталог</a>
+                            </li>
+                            <li>
+                                <a href="#">Доставка и оплата</a>
+                            </li>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="user-blok">
+                        <a class="search" href="#"></a>
+                        <a class="login" href="#">Вход</a>
+                        <a class="basket basket-full" href="#"><span class="quantity">2 товара</span></a>
+                    </div>
                 </div>
-                <nav class="main-navigation">
-                    <ul>
-                        <li>
-                            <a class="active">Каталог</a>
-                        </li>
-                        <li>
-                            <a href="#">Доставка и оплата</a>
-                        </li>
-                        <li>
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="user-blok">
-                    <a class="search" href="#"></a>
-                    <a class="login" href="#">Вход</a>
-                    <a class="basket-full" href="#"><span class="quantity">2 товара<span></a>
+                <div class="page-header_lower">
+                    <div class="breadcrumbs pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">Главная »</a>
+                            </li>
+                            <li>
+                                <a href="#">Магазин »</a>
+                            </li>
+                            <li>
+                                <span>Средства для ухода</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <section class="header-contact">
+                        <span class="time">С 10 до 20, ежедневно</span>
+                        <span class="phone-number">8 812 450-25-25</span>
+                    </section>
                 </div>
-                <section class="header-contact">
-                    <span class="time">С 10 до 20, ежедневно</span>
-                    <span class="phone-number">8 812 450-25-25</span>
-                </section>
             </div>
         </header>
         <main class="container clearfix">
-            <div class="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="#">Главная »</a>
-                    </li>
-                    <li>
-                        <a href="#">Магазин »</a>
-                    </li>
-                    <li>
-                        <span>Средства для ухода</span>
-                    </li>
-                </ul>
-            </div>
             <div>
                 <h1 class="inner-titel">Сливочное мороженое</h1>
             </div>
@@ -58,8 +62,14 @@
                 <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
                     <div class="filter-sorting">
                         <div class="filter-title">Сортировка:</div>
-                        <div class="filter-sorting-selected">по популярности
-                            <a href="#"></a>
+                        <div class="sorting-selected">по популярности
+                            <a class="angle-down"href="#"></a>
+                            <ul class="sub-menu">
+                                <li><a href="#1">по популярности</a></li>
+                                <li><a href="#2">сначала недорогие</a></li>
+                                <li><a href="#3">сначала дорогие</a></li>
+                                <li><a href="#4">по жирности</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="filter-price">
@@ -316,5 +326,8 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-bascket">
+
+        </div>
     </body>
 </html>

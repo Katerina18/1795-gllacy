@@ -71,7 +71,7 @@ img {
 }
 
 .main-header {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   min-height: 95px;
   color: #ffffff;
 }
@@ -81,6 +81,7 @@ img {
 }
 
 .main-navigation {
+  position: relative;
   float: left;
   width: 600px;
   height: 78px;
@@ -99,10 +100,6 @@ img {
   vertical-align: top;
 }
 
-.main-navigation li:first-child {
-  margin-top: 23px;
-}
-
 .main-navigation a {
   display: block;
   padding: 30px 13px;
@@ -116,15 +113,36 @@ img {
   background:
 }
 
-.main-navigation .active {
-  padding: 6px 12px;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 50px;
-  background-color: #d07058;
-
+.main-navigation .sub-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  margin: 0;
+  padding: 10px 20px;
+  width: 143px;
+  height: 171px;
+  list-style: none;
+  border-radius: 5px;
+  background: #ffffff;
+  z-index: 5;
 }
 
+.main-navigation .sub-menu a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #323232;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.main-navigation > li:hover .sub-menu {
+  display: block;
+}
 .user-blok {
   float: right;
   margin: 24px 0 18px 0;
@@ -208,8 +226,8 @@ img {
 .basket-full {
   position: relative;
   display: inline-block;
-  padding: 8px 0 0 45px;
-  width: 117px;
+  padding: 8px 16px 0 45px;
+  max-width: 200px;
   height: 32px;
   border-radius: 50px;
   font-size: 14px;
@@ -354,6 +372,8 @@ img {
 }
 
 .breadcrumbs {
+  float: left;
+  margin-top: 28px;
   color: #ffffff;
 }
 
@@ -403,7 +423,7 @@ img {
   padding-left: 16px;
 }
 
-.filter-sorting-selected {
+.sorting-selected {
   position: relative;
   padding: 8px 16px 10px;
   font-size: 16px;
@@ -413,7 +433,12 @@ img {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.filter-sorting-selected::after {
+.sorting-selected:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.sorting-selected::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -421,6 +446,53 @@ img {
   width: 8px;
   height: 5px;
   background: url("../img/marker.svg") no-repeat;
+}
+
+.sorting-selected:hover:after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  width: 8px;
+  height: 5px;
+  background: url("../img/marker_hover.svg") no-repeat;
+}
+
+.sorting-selected .sub-menu {
+  display: none;
+  position: absolute;
+  top: 37px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 192px;
+  height: 88px;
+  list-style: none;
+  background: #ffffff;
+  z-index: 5;
+}
+
+.filter-sorting > .sorting-selected:hover .sub-menu {
+  display: block;
+}
+
+.sorting-selected .sub-menu a {
+  display: block;
+  padding: 3px 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  text-decoration: none;
+}
+
+.sorting-selected .sub-menu a:hover {
+  color: #ffffff;
+  background-color: #1e90ff;
+}
+
+.sorting-selected .sub-menu li {
+
 }
 
 .filter-price {
@@ -485,24 +557,44 @@ img {
 }
 
 .fat-controls {
-  padding: 8px 16px;
+  padding: 8px 16px 8px 46px;
+  height: 36px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .control-radio {
-  margin-right: 16px;
+  position: relative;
+  margin-right: 45px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-#radio {
+.control-radio input[type="radio"] {
+  display: none;
+}
+
+.control-radio input[type="radio"] + .control-indicator {
+  position: absolute;
+  top: 0;
+  left: -30px;
   width: 20px;
   height: 20px;
-
-  border-radius: 50%;
   border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.control-radio input[type="radio"]:checked + .control-indicator::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .filter-fillers {
@@ -512,8 +604,42 @@ img {
   height: 60px;
 }
 
+.control-checkbox {
+  position: relative;
+  margin-right: 48px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.control-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.control-checkbox input[type="checkbox"] + .control-indicator {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+
+.control-checkbox input[type="checkbox"]:checked + .control-indicator::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 13px;
+  height: 10px;
+  background: url("../img/indicator-checkbox.svg") no-repeat;
+  border-radius: 50%;
+}
+
 .fillers-controls {
-  padding: 8px 16px;
+  padding: 8px 16px 8px 48px;
   width: 700px;
   height: 36px;
   font-size: 16px;
@@ -522,6 +648,8 @@ img {
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.2);
 }
+
+
 
 .btn-form {
   float: left;
@@ -537,6 +665,22 @@ img {
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;;
 }
+
+.btn-form:hover {
+  color: #323232;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+
+.btn-form:active {
+  color: #323232;
+  border: 2px solid #ededed;
+  border-radius: 50px;
+  box-shadow: 2px 2px 1 0 #69699 inset;
+  background-color: #ededed;
+}
+
 
 .banner-wrapper {
   margin-bottom: 40px;
@@ -600,14 +744,15 @@ img {
 .catalog-product {
   width: 1146px;
   font-size: 0;
-  margin-bottom: 30px;
 }
 
 .product-item {
   position: relative;
   display: inline-block;
-  margin: 0 26px 100px 0;
+  margin-right: 26px;
+  margin-bottom: 30px;
   width: 267px;
+  height: 330px;
   vertical-align: top;
 }
 
@@ -914,14 +1059,16 @@ img {
 
 .pagination li {
   display: inline-block;
-  width: 25px;
+  padding-right: 3px;
+  min-width: 25px;
   height: 25px;
-  vertical-align: top;
+
 }
 
 .pagination a {
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
@@ -1078,7 +1225,7 @@ img {
 }
 
 .modal-content {
-  display: none;
+
 }
 
 .feedback {
@@ -1137,7 +1284,8 @@ img {
   color: #323232;
 }
 
-.feedback p {
+.feedback .text {
+  display: block;
   margin: 0;
   margin-bottom: 30px;
   padding-left: 10px;
@@ -1157,9 +1305,11 @@ img {
 
 .feedback .comment {
   margin-bottom: 24px;
-  padding: 0 10px;
+  padding: 10px;
   width: 428px;
   height: 155px;
+  border-radius: 5px;
+  border: 1px solid #b2b2b2;
 }
 
 .feedback .submit {
@@ -1177,6 +1327,23 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-bascket {
+  display: none;
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  z-index: 5;
+  margin-left: 32px;
+  width: 478px;
+  height: 442px;
+  padding: 20px 26px;
+  color: #000000;
+  width: 540px;
+  height: 242px;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 h1 {

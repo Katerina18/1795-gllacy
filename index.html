@@ -22,6 +22,13 @@
                             <ul>
                                 <li>
                                     <a href="#">Каталог</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#1">Новинки</a></li>
+                                        <li><a href="#2">Сливочное</a></li>
+                                        <li><a href="#3">Щербеты</a></li>
+                                        <li><a href="#4">Фруктовый лед</a></li>
+                                        <li><a href="#5">Мелорин</a></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#">Доставка и оплата</a>
@@ -215,13 +222,15 @@
             </div>
         </div>
         <div class="modal-content feedback">
-            <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+            <span class="modal-content-close">Закрыть</span>
             <h3>Мы обязательно вам ответим!</h3>
             <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
                 <input class="user-name" type="text" name="name" placeholder="Как вас зовут?">
-                <p>Ваша почта для ответа?</p>
-                <input class="comment" type="text" name="comment" placeholder="Напишите что-нибудь...">
-                </label>
+                <div>
+                    <lable class="text">Ваша почта для ответа?</lable>
+                    <textarea class="comment" type="text" name="comment" placeholder="Напишите что-нибудь..."></textarea>
+                    </label>
+                </div>
                 <button class="submit" type="submit">Отправить</button>
         </div>
         <div class="modal-overlay"></div>
