@@ -21,12 +21,12 @@
                         <nav class="main-navigation">
                             <ul>
                                 <li>
-                                    <a href="#">Каталог</a>
+                                    <a href="catalog.html">Каталог</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#1">Новинки</a></li>
-                                        <li><a href="#2">Сливочное</a></li>
-                                        <li><a href="#3">Щербеты</a></li>
-                                        <li><a href="#4">Фруктовый лед</a></li>
+                                        <li class="new"><a href="#">Новинки</a></li>
+                                        <li><a href="#">Сливочное</a></li>
+                                        <li><a href="#">Щербеты</a></li>
+                                        <li><a href="#">Фруктовый лед</a></li>
                                         <li><a href="#5">Мелорин</a></li>
                                     </ul>
                                 </li>
@@ -39,8 +39,24 @@
                             </ul>
                         </nav>
                         <div class="user-blok">
-                            <a class="search" href="#"></a>
-                            <a class="login" href="#">Вход</a>
+                            <a class="search" href="#">
+                                <div>
+                                  <form class="search-form">
+                                      <input class="search-user" type="text" name="search" placeholder="Что ищем?">
+                                  </form>
+                                </div>
+                            </a>
+                            <a class="login" href="#">Вход
+                                <div>
+                                    <form class="login-form" method="post">
+                                        <input class="login-user" type="email"  name="email" placeholder="Электронная почта">
+                                        <input class="password-user" type="password"  name="password" placeholder="Пароль">
+                                        <button class="btn-submit" type="submit">Войти</button>
+                                        <a href="#">Забыли пароль?</a>
+                                        <a href="#">Новая регистрация</a>
+                                    </form>
+                                </div>
+                            </a>
                             <a class="basket" href="#">Пусто</a>
                                 <span class="quantity"><span>
                             </a>
@@ -76,14 +92,14 @@
                         <div class="banner-left">
                             <h2 class="banner-title">Малинка даром!</h2>
                             <p class="banner-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                            <a href="#" class="banner-link">Хочу варенье!</a>
+                            <a href="#" class="btn">Хочу варенье!</a>
                         </div>
                         <div class="banner-right">
                             <h2 class="banner-title">Шоколадки даром!</h2>
                             <p class="banner-text">
                                 При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
                             </p>
-                            <a href="#"class="banner-link">Хочу шоколадки!</a>
+                            <a href="#"class="btn">Хочу шоколадки!</a>
                         </div>
                     </div>
                     <article class="catalog-product">
@@ -125,7 +141,7 @@
                             <div class="price-title">
                                 <span class="price">355 </span><span class="ruble">P/кг</span>
                                 <p class="product-title">
-                                    <a class="product-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                                    <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                                 </p>
                             </div>
                         </div>
@@ -176,7 +192,7 @@
                                 </p>
                                 <form class="newsletter-form"action="https://echo.htmlacademy.ru">
                                     <input type="text" name="email" id="total-field" placeholder="Электронная почта">
-                                    <button class="submit" type="submit">Отправить</button>
+                                    <button class="btn-submit" type="submit">Отправить</button>
                                 </form>
                             </div>
                         </div>
@@ -190,7 +206,7 @@
                                 <span class="contact">8 812 450-25-25</span>
                                 (с 10 до 20 ежедневно)
                             </p>
-                            <a class="btn-feedback" href="#">Форма обратной связи</a>
+                            <a class="btn" href="#">Форма обратной связи</a>
                         </div>
                     </div>
                 </main>
@@ -198,7 +214,6 @@
                     <div class="container clearfix">
                         <div class="footer-social">
                             <a class="social-btn social-btn-twitter" href="#"></a>
-
                             <a class="social-btn social-btn-instagram" href="#"></a>
                             <a class="social-btn social-btn-facebook" href="#"></a>
                             <a class="social-btn social-btn-vkontakte" href="#"></a>
