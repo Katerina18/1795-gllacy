@@ -1155,6 +1155,13 @@ img {
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.b-rub {
+  font-family: 'ALSRubl-Arial', Arial, sans-serif;
+  line-height: normal;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
 .ruble {
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
@@ -1694,6 +1701,7 @@ img {
 }
 
 .feedback {
+  display: none;
   position: fixed;
   top: 120px;
   left: 50%;
@@ -1788,6 +1796,7 @@ img {
 }
 
 .modal-overlay {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
