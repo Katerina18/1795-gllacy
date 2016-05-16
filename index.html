@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900,500&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/fonts.css">
     </head>
     <body>
         <input type="radio" id="btn-1" name="toggle" checked>
@@ -21,20 +20,20 @@
                         </div>
                         <nav class="main-navigation">
                             <ul class="catalog-list">
-                                <li class="catalog">
+                                <li class="list">
                                     <a href="catalog.html">Каталог</a>
                                         <ul class="sub-menu">
                                         <li class="new"><a href="#">Новинки</a></li>
-                                        <li class="product-1"><a href="#">Сливочное</a></li>
-                                        <li class="product-2"><a href="#">Щербеты</a></li>
-                                        <li class="product-3"><a href="#">Фруктовый лед</a></li>
-                                        <li class="product-4"><a href="#">Мелорин</a></li>
+                                        <li class="product"><a href="#">Сливочное</a></li>
+                                        <li class="product"><a href="#">Щербеты</a></li>
+                                        <li class="product"><a href="#">Фруктовый лед</a></li>
+                                        <li class="product"><a href="#">Мелорин</a></li>
                                     </ul>
                                 </li>
-                                <li class="delivery">
+                                <li class="list">
                                     <a href="#">Доставка и оплата</a>
                                 </li>
-                                <li class="company">
+                                <li class="list">
                                     <a href="#">О компании</a>
                                 </li>
                             </ul>
@@ -159,7 +158,7 @@
                                         <img src="img/icecream_coffee.jpg" width="267" height="267" alt="Сливочно-кофейное">
                                     </div>
                                     <div class="price-title">
-                                        <span class="price">380 </span><span class="b-rub">P</span>
+                                        <span class="price">380 </span><span class="b-rub">P</span>/кг
                                         <p class="product-title">
                                             <a class="product-title">Сливочно-кофейное с кусочками шоколада</a>
                                         </p>
@@ -176,7 +175,7 @@
                                 <img src="img/icecream_coffee.jpg" width="267" height="267" alt="Сливочно-кофейное">
                             </div>
                             <div class="price-title">
-                                <span class="price">380 </span><span class="b-rub">P</span>
+                                <span class="price">380 </span><span class="b-rub">P</span>/кг
                                 <p class="product-title">
                                     <a class="product-title" href="#">Сливочно-кофейное с кусочками шоколада</a>
                                 </p>
@@ -330,10 +329,8 @@
             <h3>Мы обязательно вам ответим!</h3>
             <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
                 <input class="user-name" type="text" name="name" placeholder="Как вас зовут?">
-                <div class="user-comment">
-                    <lable class="text">Ваша почта для ответа?</lable>
-                    <textarea class="comment" name="text" placeholder="Напишите что-нибудь..."></textarea>
-                </div>
+                <lable class="text">Ваша почта для ответа?</lable>
+                <textarea class="comment" name="text" placeholder="Напишите что-нибудь..."></textarea>
                 <button class="btn-submit btn-modal" type="submit">Отправить</button>
             </form>
         </div>

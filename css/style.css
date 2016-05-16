@@ -122,11 +122,11 @@ img {
   border-radius: 50px;
 }
 
-.active a{
+.active a {
   text-decoration: none;
 }
 
-.active a:hover{
+.active a:hover {
   color: #ffffff;
   background: #d07058;
   border-radius: 50px;
@@ -135,7 +135,7 @@ img {
 .main-navigation .sub-menu {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 53px;
   left: 0;
   margin: 0;
   padding: 0;
@@ -148,7 +148,7 @@ img {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.main-navigation > .catalog-list .catalog:hover .sub-menu {
+.catalog-list > .list:hover .sub-menu {
   display: block;
 }
 
@@ -1624,11 +1624,10 @@ img {
 
 .footer-menu-item {
   display: inline-block;
+  vertical-align: top;
   margin: 0;
   padding-left: 22px;
   width: 144px;
-  vertical-align: top;
-
 }
 
 .footer-menu-item:last-child {
@@ -1638,6 +1637,7 @@ img {
 }
 
 .footer-menu a {
+  display: block;
   color: #ffffff;
   text-decoration: underline;
 }
@@ -1659,11 +1659,12 @@ img {
 .item-providers::before {
   position: absolute;
   left: -22px;
-  top: 3px;
+  top: 50%;
+  margin-top: -6px;
   content: "";
   width: 15px;
   height: 13px;
-  background: url("../img/heart.svg") no-repeat;
+  background: url("../img/heart.svg") no-repeat center;
 }
 
 .copyright {
