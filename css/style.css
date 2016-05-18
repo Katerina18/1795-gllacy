@@ -54,6 +54,7 @@ img {
   height: auto;
 }
 
+
 .clearfix::after {
   content: "";
   display: table;
@@ -81,25 +82,25 @@ img {
 }
 
 .main-navigation {
-  position: relative;
   float: left;
   width: 600px;
   height: 78px;
 }
 
-.main-navigation ul {
+.catalog-list {
+  position: relative;
   margin-top: 23px;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 
-.main-navigation li {
+.catalog-list li {
   display: inline-block;
   vertical-align: top;
 }
 
-.main-navigation a {
+.catalog-list a {
   display: block;
   padding: 6px 14px;
   font-size: 16px;
@@ -109,7 +110,7 @@ img {
   text-decoration: underline;
 }
 
-.main-navigation a:hover {
+.catalog-list a:hover {
   font-weight: 700;
   color: #323232;
   text-decoration: none;
@@ -132,10 +133,16 @@ img {
   border-radius: 50px;
 }
 
-.main-navigation .sub-menu {
+.catalog-inner {
+  width: 88px;
+  height: 116px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.catalog-list .sub-menu {
   display: none;
   position: absolute;
-  top: 53px;
+  top: 38px;
   left: 0;
   margin: 0;
   padding: 0;
@@ -152,23 +159,31 @@ img {
   display: block;
 }
 
-.main-navigation .sub-menu li {
+.catalog-list .list:hover > a {
+  font-weight: 700;
+  color: #323232;
+  text-decoration: none;
+  background-color: #f7f6f3;
+  border-radius: 50px;
+}
+
+.catalog-list .sub-menu li {
   display: block;
 }
 
-.main-navigation .sub-menu a:hover {
+.catalog-list .sub-menu a:hover {
   font-weight: 400;
   background: #fbded8;
   border-radius: 0;
 }
 
-.main-navigation .sub-menu a:active {
+.catalog-list .sub-menu a:active {
   font-weight: 400;
   background: #f6b5a5;
   border-radius: 0;
 }
 
-.main-navigation .sub-menu a {
+.catalog-list .sub-menu a {
   display: block;
   margin: 0;
   padding: 10px 20px;
@@ -182,7 +197,7 @@ img {
   font-weight: 400;
 }
 
-.main-navigation .sub-menu .new a {
+.catalog-list .sub-menu .new a {
   position: relative;
   font-weight: 700;
 }
@@ -1007,7 +1022,7 @@ img {
   height: 229px;
   color: #ffffff;
   border-radius: 10px;
-  background: url("../img/razz.jpg") no-repeat;
+  background: #8c0231 url("../img/razz.jpg") no-repeat;
 }
 
 .banner-title {
@@ -1039,7 +1054,6 @@ img {
   background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   cursor: pointer;
 }
@@ -1065,7 +1079,7 @@ img {
   height: 229px;
   color: #ffffff;
   border-radius: 10px;
-  background: url("../img/chocolate.jpg") no-repeat;
+  background: #3a1c0f url("../img/chocolate.jpg") no-repeat;
 }
 
 .catalog-product {
@@ -1088,7 +1102,7 @@ img {
   margin-right: 0;
 }
 
-.product-item:hover .product-hover {
+.product-item:hover > .product-hover {
   display: block;
 }
 
@@ -1101,13 +1115,38 @@ img {
   height: 405px;
   background: rgba(255,255, 255, 0.3);
   border-radius: 5px;
-  z-index: 2;
+  z-index: 20;
 }
 
 .product-inner {
   position: relative;
   margin: 5px;
   height: 395px;
+
+}
+
+.product-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: #ffffff url("../img/hit.png") no-repeat;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.product-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: #ffffff url("../img/hit.png") no-repeat;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 .btn-preview {
@@ -1168,6 +1207,8 @@ img {
 
 .price-title a {
   display: block;
+  height: 44px;
+  overflow: hidden;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -1178,8 +1219,10 @@ img {
 }
 
 .product-title {
+  margin: 0;
   margin-top: 26px;
   padding: 0 5px;
+
 }
 
 .advantages {
@@ -1189,7 +1232,7 @@ img {
   padding: 25px 20px;
   color: #323232;
   border-radius: 10px;
-  background: url("../img/pattern.jpg");
+  background: #ebddbd url("../img/pattern.jpg");
 }
 
 .advantages h3 {
@@ -1283,7 +1326,7 @@ img {
   width: 560px;
   height: 220px;
   border-radius: 15px;
-  background: url("../img/strawberry.jpg")
+  background: #ffffff url("../img/strawberry.jpg")
 }
 
 .blog-subtitle {
@@ -1378,6 +1421,7 @@ img {
 
 #total-field {
   display: inline-block;
+  vertical-align: top;
   margin-right: 12px;
   padding: 0 16px;
   width: 356px;
@@ -1388,9 +1432,15 @@ img {
 
 .map {
   position: relative;
+  margin: 0 0 0 -26px;
+  width: 1200px;
+  height: 429px;
+  background: url("../img/map.jpg") no-repeat;
+}
+
+#yandex-map {
   width: 100%;
   height: 429px;
-  background: url("../img/map.jpg")
 }
 
 .map-contact {
@@ -1758,14 +1808,21 @@ img {
   color: #323232;
 }
 
-.feedback .text {
+.feedback .text-form {
   display: block;
   margin: 0;
-  margin-bottom: 30px;
-  padding-left: 10px;
+  padding: 0;
   font-size: 16px;
   line-height: 24px;
   color: #999999;
+  border: none;
+}
+
+.title-form {
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .feedback .user-name {
