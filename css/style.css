@@ -1160,11 +1160,6 @@ img {
   text-decoration: none;
 }
 
-.hit {
-  position: relative;
-  z-index: 2;
-}
-
 .preview {
   width: 267px;
   height: 267px;
